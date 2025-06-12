@@ -4,12 +4,12 @@ A powerful command-line DNS query tool similar to `dig` that resolves domain nam
 
 ## Features
 
-- 🔍 **Raw DNS Queries**: Send UDP packets directly to DNS servers
-- 📊 **Multiple Record Types**: Support for A, AAAA, MX, NS, TXT, CNAME records
-- ⚡ **Response Caching**: TTL-based caching for improved performance
-- 📈 **Visualization**: Query response time graphs and cache statistics
-- 🛠️ **Custom DNS Servers**: Query any DNS server of your choice
-- 📝 **Detailed Output**: Comprehensive DNS response information
+- **Raw DNS Queries**: Send UDP packets directly to DNS servers
+- **Multiple Record Types**: Support for A, AAAA, MX, NS, TXT, CNAME records
+- **Response Caching**: TTL-based caching for improved performance
+- **Visualization**: Query response time graphs and cache statistics
+- **Custom DNS Servers**: Query any DNS server of your choice
+- **Detailed Output**: DNS response information
 
 ## Installation
 
@@ -28,19 +28,14 @@ python main.py example.com
 
 ### Advanced Usage
 ```bash
-# Query specific record type
 python main.py example.com -t MX
 
-# Use custom DNS server
 python main.py example.com -s 1.1.1.1
 
-# Enable visualization
 python main.py example.com --visualize
 
-# Show cache statistics
 python main.py --cache-stats
 
-# Clear cache
 python main.py --clear-cache
 ```
 
@@ -62,11 +57,11 @@ python main.py --clear-cache
 DNS Query Tool/
 ├── src/
 │   ├── __init__.py
-│   ├── dns_client.py      # Core DNS client functionality
-│   ├── packet_builder.py  # DNS packet construction
-│   ├── packet_parser.py   # DNS response parsing
-│   ├── cache_manager.py   # Caching system
-│   └── visualizer.py      # Visualization features
+│   ├── dns_client.py    
+│   ├── packet_builder.py 
+│   ├── packet_parser.py  
+│   ├── cache_manager.py  
+│   └── visualizer.py   
 ├── tests/
 │   ├── __init__.py
 │   ├── test_dns_client.py
@@ -76,7 +71,7 @@ DNS Query Tool/
 ├── examples/
 │   └── sample_queries.py
 ├── requirements.txt
-├── main.py               # CLI entry point
+├── main.py 
 ├── README.md
 └── project_proposal.md
 ```
@@ -150,22 +145,10 @@ pytest tests/ --cov=src --cov-report=html
 
 ## Dependencies
 
-- Python 3.8+
-- matplotlib (for visualization)
-- pytest (for testing)
-- No external DNS libraries (raw socket implementation)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Add tests for new functionality
-4. Ensure all tests pass
-5. Submit a pull request
-
-## License
-
-MIT License - see LICENSE file for details
+- Python
+- matplotlib
+- pytest
+- No external DNS libraries
 
 ## Troubleshooting
 
@@ -191,5 +174,3 @@ python main.py example.com -v
 - [ ] Web interface
 
 ---
-
-**Note**: This tool is for educational and testing purposes. For production use, consider using established DNS libraries.
